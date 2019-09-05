@@ -1,0 +1,8 @@
+movie\wsdl\GetMovieResponse.class
+myclass\CinemaClient.class
+movie\wsdl\Movie.class
+myclass\StartApplication.class
+myclass\CinemaConfiguration.class
+movie\wsdl\package-info.class
+movie\wsdl\GetMovieRequest.class
+movie\wsdl\ObjectFactory.class
