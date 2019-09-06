@@ -1,6 +1,7 @@
 package myclass;
 
 import movie.wsdl.GetMovieResponse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,8 +14,8 @@ public class StartApplication {
         SpringApplication.run(StartApplication.class, args);
     }
 
-    @Bean
-    CommandLineRunner lookup(CinemaClient quoteClient) {
+    /*@Bean
+    CommandLineRunner commandLineRunner(CinemaClient quoteClient) {
         return args -> {
             GetMovieResponse response = quoteClient.getMovieResponse("Joker");
             String string = String.format("Title: %s\nDirector: %s\nDuration: %s\nPremiere: %s",
@@ -24,6 +25,6 @@ public class StartApplication {
                     response.getMovie().getPremiere());
             System.out.println(string);
         };
-    }
+    }*/
 
 }

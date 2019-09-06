@@ -6,3 +6,4 @@ myclass\CinemaConfiguration.class
 movie\wsdl\package-info.class
 movie\wsdl\GetMovieRequest.class
 movie\wsdl\ObjectFactory.class
+myclass\CinemaController.class

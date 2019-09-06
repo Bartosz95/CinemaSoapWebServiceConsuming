@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: CinemaControllerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.442 s <<< FAILURE! - in CinemaControllerTest
+initializationError(CinemaControllerTest)  Time elapsed: 0.01 s  <<< ERROR!
+java.lang.Exception: No runnable methods
+
