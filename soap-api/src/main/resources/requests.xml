@@ -1,0 +1,7 @@
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+    <Body>
+        <getMovieByIdRequest xmlns="http://CinemaSevice.com/SoapWebServicesProducing">
+            <id>5</id>
+        </getMovieByIdRequest>
+    </Body>
+</Envelope>

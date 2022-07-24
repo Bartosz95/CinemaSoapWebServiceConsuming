@@ -1,0 +1,16 @@
+target/
+
+### IntelliJ IDEA ###
+.idea
+.git
+*.iws
+*.iml
+*.ipr
+
+# My data #
+
+src/main/resources/data.tsv
+.mvn
+movies-rest-service.iml
+mvnw
+mvnw.cmd

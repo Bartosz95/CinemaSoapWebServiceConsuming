@@ -1,0 +1,22 @@
+version: "3"
+services:
+  db:
+    image: mongo:4
+    container_name: mongo-db
+    ports:
+      - 27017:27017
+  app:
+    image: movies-producing-mongo
+    container_name: movies-producing-mongo
+    ports:
+      - 8080:8080
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    environment:
+      - spring.data.mongodb.host=db
+      - spring.data.mongodb.port=27017
+      - spring.data.mongodb.database=movies-db
+      - data.path=data.tsv

@@ -1,0 +1,117 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:csn="http://CinemaSevice.com/SoapWebServicesProducing"
+           targetNamespace="http://CinemaSevice.com/SoapWebServicesProducing"
+           elementFormDefault="qualified">
+
+    <xs:complexType name="movie">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="titleType" type="xs:string"/>
+            <xs:element name="primaryTitle" type="xs:string"/>
+            <xs:element name="originalTitle" type="xs:string"/>
+            <xs:element name="isAdult" type="xs:boolean"/>
+            <xs:element name="startYear" type="xs:short"/>
+            <xs:element name="endYear" type="xs:short"/>
+            <xs:element name="runtimeMinutes" type="xs:int"/>
+            <xs:element name="genres" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="getMovieByTitleRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="title" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getMovieByIdRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getMovieResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="movie" type="csn:movie"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getAllMovieRequest">
+        <xs:complexType>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getAllMovieResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Movies" type="csn:movie" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="addMovieRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="titleType" type="xs:string"/>
+                <xs:element name="primaryTitle" type="xs:string"/>
+                <xs:element name="originalTitle" type="xs:string"/>
+                <xs:element name="isAdult" type="xs:boolean"/>
+                <xs:element name="startYear" type="xs:short"/>
+                <xs:element name="endYear" type="xs:short"/>
+                <xs:element name="runtimeMinutes" type="xs:int"/>
+                <xs:element name="genres" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="editMovieRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+                <xs:element name="titleType" type="xs:string"/>
+                <xs:element name="primaryTitle" type="xs:string"/>
+                <xs:element name="originalTitle" type="xs:string"/>
+                <xs:element name="isAdult" type="xs:boolean"/>
+                <xs:element name="startYear" type="xs:short"/>
+                <xs:element name="endYear" type="xs:short"/>
+                <xs:element name="runtimeMinutes" type="xs:int"/>
+                <xs:element name="genres" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="deleteMovieByIdRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="deleteMovieByTitleRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="title" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="deleteAllMoviesRequest">
+        <xs:complexType>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="statusResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="status" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
