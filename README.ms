@@ -1,4 +1,4 @@
-# Movies API and DB playground
+# Movies API and DB sandbox
 
 ## Abstract
 This repository contains four applications. 
