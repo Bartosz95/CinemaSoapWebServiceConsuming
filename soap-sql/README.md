@@ -1,26 +1,37 @@
-# Simple SOAP Service
+# Movies Service based on SOAP API and SQL database
 
-## If you want to test this service you need to:
-### 1 Download
+## Abstract
+SOAP API service which share endpoint with data from IMDB
+
+## Technologies
+- Java
+- Spring
+- MySQL
+- Docker
+
+## Installation
+For installation process execute commands below
+
+### Download the data form IMDB webpage
 * Download this project
 * [Download IMDB database](https://datasets.imdbws.com/title.basics.tsv.gz)
 * Unzip and put data.tsv to folder /src/main/resources/
 
-### 2 - Created 
+### Fill the database with data
 * mysql> create database mydatabase; -- Creates the new mySQL database
 * mysql> create user 'newuser'@'%' identified by 'password'; -- Creates the user
 * mysql> grant all on db_example.* to 'newuser'@'%'; -- Gives all privileges to the new user on the newly created database
 
-### 3 - Run
+### Build the project
 * $ mvn install; -- Install project
 * $ java -jar target/cinema-soap-web-service-producing-0.1.jar -Ddatabase.create=true -Ddatabase.records=500; -- run application, create table "Movie" and load 500(defoult 100) record 
 * if you want to save your changes, next time run app without flag
 
-### 4 - Test
-Post method by XML in URL http://localhost:8080/ws. Example: 
-#### Get all record 
-* Method: POST
-* URL: http://localhost:8080/ws
+## Tutorial
+Post method by XML are avaiable under http://localhost:8080/ws. You can see some examples be;pw 
+
+### Get all movies 
+Send POST request to http://localhost:8080/ws 
 ```$xml
 <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
     <Body>
@@ -29,10 +40,8 @@ Post method by XML in URL http://localhost:8080/ws. Example:
     </Body>
 </Envelope>
 ```
-#### Add record
-* Method: POST
-* URL: http://localhost:8080/ws
-##### XML CODE:
+### Add new movie
+Send POST request to http://localhost:8080/ws with data below
 ```xml
 <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
     <Body>
@@ -49,10 +58,8 @@ Post method by XML in URL http://localhost:8080/ws. Example:
     </Body>
 </Envelope>
 ```
-#### Change record ####
-* Method: POST
-* URL: http://localhost:8080/ws
-##### XML CODE:
+### Modify movies
+Send POST request with command below http://localhost:8080/ws
 ```xml
 <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
      <Body>

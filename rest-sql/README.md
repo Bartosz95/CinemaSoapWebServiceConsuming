@@ -1,22 +1,26 @@
-# Movies Service
-## Necessary tools:
+# Movies Service based on REST API and NoSQL database
+
+## Abstract
+REST API service which share endpoint with data from IMDB
+
+## Technologies
+- Java
+- Spring
+- MySQL
+- Docker
+
+## Requirements
 * Maven
 * docker-compose
-# Installation process:
-## For installation run command below
- [Download](https://github.com/Bartosz95/movies-rest-spring-mongodb/archive/master.zip) and unzip or clone repository from github:
+ [Download](https://github.com/Bartosz95/movies-rest-spring-mysql/archive/master.zip) and unzip or clone repository from github:
 ```shell script
-git clone https://github.com/Bartosz95/movies-rest-spring-mongodb.git
+git clone https://github.com/Bartosz95/movies-rest-spring-mysql.git
 ```
 [Download IMDB database](https://datasets.imdbws.com/title.basics.tsv.gz) and unzip and put `data.tsv` to folder `movies-rest-spring-mysql/src/main/resources/static/`
 
-Change directory to movies-rest-spring-mongodb/ :
+Change directory to movies-rest-spring-mysql/ :
 ```shell script
-movies-rest-spring-mysql/src/main/resources/static/
-```
-Change directory to movies-rest-spring-mongodb/ :
-```shell script
-cd movies-rest-spring-mongodb/
+cd movies-rest-spring-mysql/
 ```
 Build jar file in three module:
 ```shell script
@@ -26,18 +30,19 @@ Build docker images and run containers:
 ```shell script
 docker-compose up
 ```
-#### If throw error:
+## If throw error:
 Tip 1 : stop container, clean all containers and remove image 
 ```shell script
-docker stop movies-producing-mongodb mongo-db
+docker stop movies-producing-mysql mysql-db 
 docker docker container prune
-docker image rm movies-producing-mongodb
+docker image rm movies-producing-mysql
 ```
 Tip2:
-Make sure if you have free ports 8080 and 27017 if not change ports in docker-compose.yml
-## Use application
-You can communicate with this web service for example by [POSTMAN](https://www.getpostman.com/) program. Use Get, Post, Delete method by JSON in URL http://localhost:8080/api/v1/movies. Example: 
-#### Create all record
+Make sure if you have free ports 8080 and 3306 if not change ports in docker-compose.yml
+## Tutorial
+You can communicate with this web service for example by [POSTMAN](https://www.getpostman.com/) program. Use Get, Post, Delete method by JSON in URL http://localhost:8080/api/v1/movies. Example:
+
+### Instert movies
 Method:
 ```html
 POST
@@ -50,7 +55,7 @@ Headers parameter:
 ```html
 Content-Type: application/json
 ```
-#### Get all record
+### Get all movies
 For get all credits go to [page](http://http://localhost:8080/api/v1/movies) or send message looks like:
 Method:
 ```html
@@ -60,7 +65,7 @@ URL address:
 ```html
 http://localhost:8080/api/v1/movies
 ```
-#### Add record
+### Add new movie
 Method:
 ```html
 POST
@@ -86,7 +91,7 @@ Body message:
 "adult": false
 }
 ```
-#### Change record ####
+### modify movie
 Method:
 ```html
 POST
