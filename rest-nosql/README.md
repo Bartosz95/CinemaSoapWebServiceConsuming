@@ -48,7 +48,7 @@ Tip2:
 Make sure if you have free ports 8080 and 27017 if not change ports in docker-compose.yml
 
 ## Tutorial
-You can communicate with this web service for example by [POSTMAN](https://www.getpostman.com/) program. Use Get, Post, Delete method by JSON in URL http://localhost:8080/api/v1/movies. Example: 
+You can communicate with this web service for example by [POSTMAN](https://www.getpostman.com/) program. Use the Get, Post, Delete method by JSON in the URL http://localhost:8080/api/v1/movies. Example: 
 
 ### Insert movies
 Method:

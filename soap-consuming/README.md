@@ -1,4 +1,3 @@
-# Cinema Soap Web Service Consuming #
-Web service which pull data form Movies SOAP API requests to CinemaSoamWebService. It is not completed
-* not complite
-* java version = 8
+# Cinema Soap Web Service Consuming
+Web service which pulls data from movies SOAP API requests to CinemaSoamWebService. It is not completed
+* not complete

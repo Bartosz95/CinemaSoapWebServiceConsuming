@@ -1,3 +1,4 @@
+
 # Movies Service based on SOAP API and SQL database
 
 ## Abstract
@@ -12,7 +13,7 @@ SOAP API service which share endpoint with data from IMDB
 ## Installation
 For installation process execute commands below
 
-### Download the data form IMDB webpage
+### Download the data from IMDB website
 * Download this project
 * [Download IMDB database](https://datasets.imdbws.com/title.basics.tsv.gz)
 * Unzip and put data.tsv to folder /src/main/resources/
@@ -28,7 +29,7 @@ For installation process execute commands below
 * if you want to save your changes, next time run app without flag
 
 ## Tutorial
-Post method by XML are avaiable under http://localhost:8080/ws. You can see some examples be;pw 
+Post methods by XML are available under http://localhost:8080/ws. You can see some examples be;pw 
 
 ### Get all movies 
 Send POST request to http://localhost:8080/ws 
