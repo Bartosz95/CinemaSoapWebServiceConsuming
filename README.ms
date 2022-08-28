@@ -1,8 +1,8 @@
-# Movies API and DB sandbox
+# Spring playground
 
 ## Abstract
 This repository contains four applications. 
-The aim of creation was to get familiar with REST and SOAP api and also SQL and NoSQL databases. 
+The aim of creation was to get familiar with creation REST and SOAP API in Java Spring and also SQL and NoSQL databases. 
 In the current directory you can find four repositories.
 - REST API with NoSQL database (Spring, MongoDB),
 - REST API with SQL database (Spring, MySQL),
